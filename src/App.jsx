@@ -1,15 +1,25 @@
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
-import TodoList from './components/functional/TodoList';
+import HomePage from './pages/HomePage';
+import Projetos from './pages/Projetos';
+import Sobre from './pages/Sobre';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div style={{ backgroundColor: 'salmon', padding: '20px' }}>
-          <TodoList />
-        </div>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact >
+          <HomePage />
+        </Route>
+        <Route path="/projetos/:idProjeto" component={Projetos} />
+        <Route path='/sobre'>
+          <Sobre />
+        </Route>
+        <Route>
+          <h1>404</h1>
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
