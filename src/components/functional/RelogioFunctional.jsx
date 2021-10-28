@@ -1,6 +1,9 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import { ThemeContext } from "../../App"
 
 export default function RelogioFunctional() {
+
+  const { isDarkTheme } = useContext(ThemeContext)
 
   const [ data, setData ] = useState(new Date())
 
@@ -12,6 +15,8 @@ export default function RelogioFunctional() {
   }, [])
 
   return (
-    <h1>{data.toLocaleTimeString()}</h1>
+    <h1 style={{
+      color: isDarkTheme ? "cyan" : 'lightgreen'
+    }}>{data.toLocaleTimeString()}</h1>
   )
 }
