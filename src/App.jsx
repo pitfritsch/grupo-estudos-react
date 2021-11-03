@@ -8,9 +8,7 @@ import HomePage from './pages/HomePage';
 import Projetos from './pages/Projetos';
 import Sobre from './pages/Sobre';
 
-export const ThemeContext = createContext({
-  teste: 'oi'
-})
+export const ThemeContext = createContext()
 
 function App() {
   const { estaLogado } = useAuth()
@@ -18,7 +16,7 @@ function App() {
   const [ isDarkTheme, toggleDarkTheme ] = useToggle(false)
 
   return (
-    <ThemeContext.Provider value={{ toggleDarkTheme }} teste={true} isDarkTheme={isDarkTheme}>
+    <ThemeContext.Provider value={{ toggleDarkTheme, isDarkTheme }}>
       <BrowserRouter>
         <Switch>
           <Route path="/" exact >
