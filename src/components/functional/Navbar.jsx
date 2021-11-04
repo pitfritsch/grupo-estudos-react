@@ -9,7 +9,7 @@ export default function Navbar() {
   useEffect(() => {
     console.log({ isDarkTheme })
   }, [isDarkTheme])
-
+  
   return (
     <div>
       <Link to='/'>Home</Link>
@@ -17,6 +17,8 @@ export default function Navbar() {
       <Link to='/projetos'>Projetos</Link>
       <br />
       <Link to='/sobre'>Sobre</Link>
+      <br />
+      <Link to='/clientes'>Clientes</Link>
       <br />
       <Link to='/dashboard'>Dashboard</Link>
       <br />

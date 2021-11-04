@@ -3,6 +3,7 @@ import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import useAuth from './hooks/useAuth';
 import useToggle from './hooks/useToggle';
+import Clientes from './pages/Clientes';
 import Dashboard from './pages/Dashboard';
 import HomePage from './pages/HomePage';
 import Projetos from './pages/Projetos';
@@ -25,6 +26,9 @@ function App() {
           <Route path="/projetos/:idProjeto" component={Projetos} />
           <Route path='/sobre'>
             <Sobre />
+          </Route>
+          <Route path='/clientes'>
+            <Clientes />
           </Route>
           <Route path="/dashboard" render={(props) => {
               if (estaLogado()) {
