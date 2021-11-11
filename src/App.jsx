@@ -6,6 +6,7 @@ import useToggle from './hooks/useToggle';
 import Clientes from './pages/Clientes';
 import Dashboard from './pages/Dashboard';
 import HomePage from './pages/HomePage';
+import Login from './pages/Login';
 import Projetos from './pages/Projetos';
 import Sobre from './pages/Sobre';
 
@@ -22,6 +23,9 @@ function App() {
         <Switch>
           <Route path="/" exact >
             <HomePage />
+          </Route>
+          <Route path="/login" >
+            <Login />
           </Route>
           <Route path="/projetos/:idProjeto" component={Projetos} />
           <Route path='/sobre'>

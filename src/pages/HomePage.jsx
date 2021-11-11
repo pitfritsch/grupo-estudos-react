@@ -3,6 +3,14 @@ import { useHistory } from 'react-router'
 import { ThemeContext } from '../App'
 import Navbar from '../components/functional/Navbar'
 import useAuth from '../hooks/useAuth'
+import { Button } from '@mui/material';
+import { withStyles } from '@mui/styles'
+
+const BotaoCustomizado = withStyles({
+  root: {
+    backgroundColor: 'purple'
+  }
+})(props => <Button {...props} />)
 
 export default function HomePage() {
   const { entrar, sair } = useAuth()
@@ -23,10 +31,10 @@ export default function HomePage() {
       color: isDarkTheme ? 'white' : 'black'
     }}>
       <Navbar />
-      <button onClick={login}>Login</button>
+      <Button variant='contained' color='error' onClick={login}>Login</Button>
       <br />
-      <button onClick={entrar}>Entrar</button>
-      <button onClick={sair}>Sair</button>
+      <Button variant='outlined' onClick={entrar}>Entrar</Button>
+      <BotaoCustomizado onClick={sair}>Sair</BotaoCustomizado>
       <br />
       <br />
       <h1>Texto teste</h1>

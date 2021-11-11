@@ -20,6 +20,8 @@ export default function Navbar() {
       <br />
       <Link to='/clientes'>Clientes</Link>
       <br />
+      <Link to='/login'>Pagina de login</Link>
+      <br />
       <Link to='/dashboard'>Dashboard</Link>
       <br />
       <a href="/sobre">sobre</a>  {/* recarrega */}
