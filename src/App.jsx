@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage';
 import Login from './pages/Login';
 import Projetos from './pages/Projetos';
 import Sobre from './pages/Sobre';
+import Veiculos from './pages/Veiculos';
 
 export const ThemeContext = createContext()
 
@@ -43,6 +44,9 @@ function App() {
               }
             }}
           />
+          <Route path='/veiculos/:idMarca'>
+            <Veiculos />
+          </Route>
           <Route>
             <h1>404</h1>
           </Route>
